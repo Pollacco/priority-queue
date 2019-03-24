@@ -17,7 +17,11 @@ class Node {
 	}
 
 	removeChild(node) {
-
+		if (this.left == node) {
+			this.left = null;
+		} else if (this.right == node) {
+			this.right = null;
+		}
 	}
 
 	remove() {
