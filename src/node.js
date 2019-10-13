@@ -21,11 +21,15 @@ class Node {
 			this.left = null;
 		} else if (this.right == node) {
 			this.right = null;
+		} else {
+			throw new error('Not a child of this node');
 		}
 	}
 
 	remove() {
-
+		if (this.parent != null) {
+			this.child.parent.removeChild(this.child);
+		}
 	}
 
 	swapWithParent() {

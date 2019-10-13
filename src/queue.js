@@ -11,14 +11,19 @@ class PriorityQueue {
 	}
 
 	shift() {
+		if (this.size() > 0) {
+			return this.heap.pop();
+		} else {
+			throw Error('Queue is empty');
+		}
 	}
 
 	size() {
-		return this.length;
+		return this.heap.size();
 	}
 
 	isEmpty() {
-		return this.length === 0;
+		return this.heap.isEmpty(); 
 	}
 }
 
